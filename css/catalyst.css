@@ -67,6 +67,7 @@ body {
 	z-index: 999;
 	background: none;
 	background-color: none;
+	cursor: pointer;
 }
 
 #catalystName {
@@ -106,4 +107,48 @@ body {
 	bottom: 0px;
 	background-color: #333333;
 	z-index: 901;
+}
+
+
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+	#headerComb img {
+		width: 110%;
+		height: auto;
+	}
+
+	#headerComb {
+		left: 0px;
+		width: 110%;
+	}
+
+	#logoHover {
+		left: 3.3%;
+		width: 8.8%;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#headerComb img {
+		width: 120%;
+		height: auto;
+	}
+
+	#headerComb {
+		left: 0px;
+		width: 120%;
+	}
+
+	#logoHover {
+		left: 3.6%;
+		width: 9.6%;
+		cursor: pointer;
+	}
+
+	#content {
+		font-size: 13px;
+		width: 70%;
+		top: 20%;
+		left: 12%;
+	}
 }

@@ -1,3 +1,4 @@
+/*
 jQuery.browser = {};
 (function () {
     jQuery.browser.msie = false;
@@ -7,6 +8,12 @@ jQuery.browser = {};
         jQuery.browser.version = RegExp.$1;
     }
 })();
+*/
+
+// debulked onresize handler
+function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
+
+
 
 $(document).ready(function() {
 	var hoverBox = $("#logoHover");
@@ -42,7 +49,16 @@ $(document).ready(function() {
 
 });
 
-$(window).resize(function() {
+on_resize(function() {
+	//console.log("resized");
 	var hoverBox = $("#logoHover");
 	hoverBox.css("height",hoverBox.width());
+	console.log(hoverBox.width());
 });
+
+
+/*
+$(window).resize(function() {
+	
+});
+*/
