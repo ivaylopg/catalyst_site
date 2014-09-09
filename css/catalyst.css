@@ -1,6 +1,16 @@
 /* 
  * Catalyst Styles
  */
+
+/*
+font-family: 'Lora', serif;  400
+font-family: 'Exo 2', sans-serif; 300 400
+font-family: 'Roboto Slab', serif; 300 400
+font-family: 'Merriweather', serif; 300 400 700
+
+*/
+
+
 /*
 html, body {
 	width:      100%;
@@ -12,7 +22,8 @@ body {
 	background-color: #333333;
 	/*If you want to add IE: http://css-tricks.com/perfect-full-page-background-image/ */
 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Exo 2', serif;
+	font-weight: 200;
 	font-size: 12px;
 	color: #ffffff;
 	overflow: auto;
@@ -59,19 +70,22 @@ body {
 }
 
 #catalystName {
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
 	position: fixed;
 	width: auto;
 	height: auto;
-	font-size: 36px;
+	font-size: 38px;
 	color: #FBF49C;
-	top: 9%;
+	top: 8%;
 	left: 12%;
 
 }
 
 #content {
 	position: absolute;
-	font-size: 14px;
+	font-size: 13px;
+	font-weight: 200;
 	width: 40%;
 	height: auto;
 	top: 20%;
