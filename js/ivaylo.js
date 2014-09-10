@@ -69,7 +69,8 @@ $(document).ready(function() {
 	//$("#item").attr("class", "oldclass");
 
 	$('#fb').svg({loadURL: "images/fb.svg"}); 
-	var svg = $('#fb').svg('get');
+	$('#twitter').svg({loadURL: "images/twitter.svg"}); 
+	//var svg = $('#fb').svg('get');
 	//$(svg.root()).addClass("social");
 	//svg.load("../images/twohex.svg"); 
 	//resetSize(svg);
