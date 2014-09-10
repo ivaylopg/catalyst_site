@@ -83,8 +83,12 @@ $(document).ready(function() {
 	$("#content").css("top",contTop + "px");
 	//console.log(contTop);
 
-
+	$("object").click(function(){
+		alert("yes");
+	})
 });
+
+
 
 on_resize(function() {
 	//console.log("resized");

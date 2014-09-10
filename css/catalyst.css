@@ -29,6 +29,19 @@ body {
 	overflow: auto;
 }
 
+a {
+	color: #FBF49C;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.small {
+	font-size: 10px;
+}
+
 #backImage {
 	position: fixed;
 	width: 100%;
@@ -107,6 +120,27 @@ body {
 	bottom: 0px;
 	background-color: #333333;
 	z-index: 901;
+	line-height: 30px;
+}
+
+#footercontent {
+	padding-left: 12%;
+}
+
+.social {
+	height: 20px;
+	width: auto;
+	padding-right: 5px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+#fb {
+	padding-left: 10px;
+}
+
+svg.socialLink:hover{
+	cursor: pointer;
 }
 
 #sizer {
@@ -144,6 +178,10 @@ body {
 
 	#catalystName, #content, #sizer {
 		left: 14%;
+	}
+
+	#footercontent {
+		padding-left: 14%;
 	}
 }
 
