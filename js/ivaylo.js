@@ -68,7 +68,7 @@ $(document).ready(function() {
 	// Instead of .removeClass("newclass")
 	//$("#item").attr("class", "oldclass");
 
-	//$('#svgtest').svg({loadURL: "images/twohex.svg"}); 
+	$('#fbDiv').svg({loadURL: "images/fb.svg"}); 
 	//var svg = $('#svgtest').svg('get');
 	//svg.load("../images/twohex.svg"); 
 	//resetSize(svg);
