@@ -89,7 +89,7 @@ on_resize(function() {
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
 
-});
+})();
 
 
 /*
