@@ -127,7 +127,7 @@ a:hover {
 	padding-left: 12%;
 }
 
-.social {
+.social, .socialLink {
 	height: 20px;
 	width: auto;
 	padding-right: 5px;
@@ -137,10 +137,6 @@ a:hover {
 
 #fb {
 	padding-left: 10px;
-}
-
-svg.socialLink:hover{
-	cursor: pointer;
 }
 
 #sizer {
