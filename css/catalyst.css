@@ -127,7 +127,7 @@ a:hover {
 	padding-left: 12%;
 }
 
-.social {
+.social, .socialLink {
 	display: inline-block;
 	height: 20px;
 	width: 20px;
