@@ -127,9 +127,10 @@ a:hover {
 	padding-left: 12%;
 }
 
-.social, .socialLink {
+.social {
+	display: inline-block;
 	height: 20px;
-	width: auto;
+	width: 20px;
 	padding-right: 5px;
 	vertical-align: middle;
 	margin-top: -2px;
