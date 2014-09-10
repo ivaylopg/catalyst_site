@@ -29,6 +29,7 @@ function titleResize() {
 	$("#catalystName").css("font-size",fontSize + "pt");
 
 	var titlePosRatio = 0.513699;
+	console.log($("#logo").height());
 	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
 	$("#catalystName").css("top",titlePos + "px");
 }
