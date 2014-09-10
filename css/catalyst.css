@@ -109,6 +109,21 @@ body {
 	z-index: 901;
 }
 
+#sizer {
+	visibility: hidden;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	font-size: 12pt;
+	position: fixed;
+	width: auto;
+	height: auto;
+	/*
+	background: rgba(255,0,0,0.9);
+	top: 8%;
+	left: 12%;
+	visibility: visible;
+	*/
+}
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
 	#headerComb img {
@@ -125,6 +140,10 @@ body {
 		left: 3.3%;
 		width: 8.8%;
 		cursor: pointer;
+	}
+
+	#catalystName, #content, #sizer {
+		left: 14%;
 	}
 }
 

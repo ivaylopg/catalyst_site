@@ -46,6 +46,32 @@ $(document).ready(function() {
 	//svg.load("../images/twohex.svg"); 
 	//resetSize(svg);
 	
+	//console.log($("#catalystName").css("top"));
+	//$("#catalystName").append(" - " + $("#catalystName").css("top") + " - " + $("#catalystName").height() + " - " + $("#logo").height());
+
+
+	//var sizerRatio = $('#sizer').width()/$("#headerComb").width();
+	var sizerRatio = 0.18;
+	if ($(window).innerWidth() <= 1024) {
+		sizerRatio = 0.2;
+	};
+	var titleWidth = sizerRatio * $("#headerComb").width();
+	//$('#sizer').css("width",titleWidth + "px");
+	//$('#sizer').append($('#sizer').width()/$("#headerComb").width());
+
+	var fontSize = 12;
+	while($('#sizer').width() < titleWidth-5){
+		$('#sizer').css("font-size",fontSize++ + "pt");
+	}
+	console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
+	$("#sizer").css("font-size","12pt");
+	$("#catalystName").css("font-size",fontSize + "pt");
+
+
+	var titlePosRatio = 0.513699;
+	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
+	$("#catalystName").css("top",titlePos + "px");
+
 
 });
 
@@ -53,7 +79,29 @@ on_resize(function() {
 	//console.log("resized");
 	var hoverBox = $("#logoHover");
 	hoverBox.css("height",hoverBox.width());
-	console.log(hoverBox.width());
+	//console.log(hoverBox.width());
+
+	//var sizerRatio = $('#sizer').width()/$("#headerComb").width();
+	var sizerRatio = 0.18;
+	if ($(window).innerWidth() <= 1024) {
+		sizerRatio = 0.2;
+	};
+	var titleWidth = sizerRatio * $("#headerComb").width();
+	//$('#sizer').css("width",titleWidth + "px");
+	//$('#sizer').append($('#sizer').width()/$("#headerComb").width());
+
+	var fontSize = 12;
+	while($('#sizer').width() < titleWidth-5){
+		$('#sizer').css("font-size",fontSize++ + "pt");
+	}
+	console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
+	$("#sizer").css("font-size","12pt");
+	$("#catalystName").css("font-size",fontSize + "pt");
+
+	var titlePosRatio = 0.513699;
+	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
+	$("#catalystName").css("top",titlePos + "px");
+
 });
 
 
