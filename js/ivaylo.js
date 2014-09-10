@@ -29,8 +29,15 @@ function titleResize() {
 	$("#catalystName").css("font-size",fontSize + "pt");
 
 	var titlePosRatio = 0.513699;
-	console.log($("#logo").height());
-	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
+	var logoH = $("#logo").height()
+	
+	if ($("#logo").height() == null || $("#logo").height() == 0) {
+		console.log("logoHeight was null");
+		logoH = $("#headerComb").width() * 0.11845286;
+
+	};
+
+	var titlePos = (logoH * titlePosRatio) - ($("#catalystName").height()/2);
 	$("#catalystName").css("top",titlePos + "px");
 }
 
