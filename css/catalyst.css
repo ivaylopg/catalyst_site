@@ -136,6 +136,8 @@ a:hover {
 	margin-top: -2px;
 }
 
+
+
 #fb {
 	padding-left: 10px;
 }
@@ -205,4 +207,13 @@ a:hover {
 		top: 20%;
 		left: 12%;
 	}
+}
+
+svg\:svg {
+	display: none;
+}
+
+.svg_error {
+	color: red;
+	font-weight: bold;
 }
