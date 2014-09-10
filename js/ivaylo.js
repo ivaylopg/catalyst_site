@@ -13,6 +13,25 @@ jQuery.browser = {};
 // debulked onresize handler
 function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
 
+function titleResize() {
+	var sizerRatio = 0.17;
+	if ($(window).innerWidth() <= 1024) {
+		sizerRatio = 0.195;
+	};
+	var titleWidth = sizerRatio * $("#headerComb").width();
+
+	var fontSize = 12;
+	while($('#sizer').width() < titleWidth-5){
+		$('#sizer').css("font-size",fontSize++ + "pt");
+	}
+	//console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
+	$("#sizer").css("font-size","12pt");
+	$("#catalystName").css("font-size",fontSize + "pt");
+
+	var titlePosRatio = 0.513699;
+	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
+	$("#catalystName").css("top",titlePos + "px");
+}
 
 
 $(document).ready(function() {
@@ -50,27 +69,11 @@ $(document).ready(function() {
 	//$("#catalystName").append(" - " + $("#catalystName").css("top") + " - " + $("#catalystName").height() + " - " + $("#logo").height());
 
 
-	//var sizerRatio = $('#sizer').width()/$("#headerComb").width();
-	var sizerRatio = 0.18;
-	if ($(window).innerWidth() <= 1024) {
-		sizerRatio = 0.2;
-	};
-	var titleWidth = sizerRatio * $("#headerComb").width();
-	//$('#sizer').css("width",titleWidth + "px");
-	//$('#sizer').append($('#sizer').width()/$("#headerComb").width());
 
-	var fontSize = 12;
-	while($('#sizer').width() < titleWidth-5){
-		$('#sizer').css("font-size",fontSize++ + "pt");
-	}
-	console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
-	$("#sizer").css("font-size","12pt");
-	$("#catalystName").css("font-size",fontSize + "pt");
-
-
-	var titlePosRatio = 0.513699;
-	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
-	$("#catalystName").css("top",titlePos + "px");
+	titleResize();
+	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
+	$("#content").css("top",contTop + "px");
+	//console.log(contTop);
 
 
 });
@@ -81,26 +84,10 @@ on_resize(function() {
 	hoverBox.css("height",hoverBox.width());
 	//console.log(hoverBox.width());
 
-	//var sizerRatio = $('#sizer').width()/$("#headerComb").width();
-	var sizerRatio = 0.18;
-	if ($(window).innerWidth() <= 1024) {
-		sizerRatio = 0.2;
-	};
-	var titleWidth = sizerRatio * $("#headerComb").width();
-	//$('#sizer').css("width",titleWidth + "px");
-	//$('#sizer').append($('#sizer').width()/$("#headerComb").width());
 
-	var fontSize = 12;
-	while($('#sizer').width() < titleWidth-5){
-		$('#sizer').css("font-size",fontSize++ + "pt");
-	}
-	console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
-	$("#sizer").css("font-size","12pt");
-	$("#catalystName").css("font-size",fontSize + "pt");
-
-	var titlePosRatio = 0.513699;
-	var titlePos = ($("#logo").height() * titlePosRatio) - ($("#catalystName").height()/2);
-	$("#catalystName").css("top",titlePos + "px");
+	titleResize();
+	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
+	$("#content").css("top",contTop + "px");
 
 });
 
