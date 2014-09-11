@@ -65,7 +65,7 @@ $(document).ready(function() {
 		}
 	);
 
-	$('#fb').svg({loadURL: "images/fb.svg"});
+	$('#fb').svg({loadURL: "images/fb.svg", onLoad: alert("yes")});
 	$('#twitter').svg({loadURL: "images/twitter.svg"});
 	
 	$("div.hasSVG").each(function() {
