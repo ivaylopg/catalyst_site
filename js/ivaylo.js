@@ -10,6 +10,14 @@ jQuery.browser = {};
 })();
 //*/
 
+function checkCorsSvg(sel) {
+	var svg = sel.svg('get');
+	if ($(svg.root()).attr("class" == null)) {
+		$(svg.root()).addClass("noShow");
+		sel.children('img').removeClass("noShow");
+	};
+};
+
 // debulked onresize handler
 function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
 
@@ -68,9 +76,23 @@ $(document).ready(function() {
 	// Instead of .removeClass("newclass")
 	//$("#item").attr("class", "oldclass");
 
-	$('#fb').svg({loadURL: "images/fb.svg"}); 
-	$('#twitter').svg({loadURL: "images/twitter.svg"}); 
-	//var svg = $('#fb').svg('get');
+
+
+	$('#fb').svg({loadURL: "images/fb.svg"});
+	checkCorsSvg($('#fb'));
+	// var fbg = $('#fb').svg('get');
+	// if ($(fbg.root()).attr("class" == null)) {
+	// 	$(fbg.root()).addClass("noShow");
+	// 	$("#fb img").removeClass("noShow");
+	// };
+
+	$('#twitter').svg({loadURL: "images/twitter.svg"});
+	var twg = $('#twitter').svg('get');
+	if ($(twg.root()).attr("class" == null)) {
+		$(twg.root()).addClass("noShow");
+		$("#twitter img").removeClass("noShow");
+	};
+	
 	//$(svg.root()).addClass("social");
 	//svg.load("../images/twohex.svg"); 
 	//resetSize(svg);
@@ -78,7 +100,9 @@ $(document).ready(function() {
 	//console.log($("#catalystName").css("top"));
 	//$("#catalystName").append(" - " + $("#catalystName").css("top") + " - " + $("#catalystName").height() + " - " + $("#logo").height());
 
-
+	// $(".blogVid").each(function() {
+	//     $(this).fitVids();
+	// });
 
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
@@ -90,7 +114,9 @@ $(document).ready(function() {
 	})
 });
 
-
+$(window).onerror = function (message, filename, linenumber) {
+	alert("JS error: " + message + " on line " + linenumber + " for " + filename);
+}
 
 on_resize(function() {
 	//console.log("resized");

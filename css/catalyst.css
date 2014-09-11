@@ -136,6 +136,11 @@ a:hover {
 	margin-top: -2px;
 }
 
+.social img {
+	width: 100%;
+	height: auto;
+}
+
 #fb {
 	padding-left: 10px;
 }
@@ -211,7 +216,20 @@ svg\:svg {
 	display: none;
 }
 
+
+
+.noShow {
+	display: none;
+}
 .svg_error {
 	color: red;
 	font-weight: bold;
+}
+
+.fallback { 
+  display: none;
+  /* Make sure it's the same size as the SVG takes up */
+}
+.no-svg .fallback { 
+  display: inline-block;
 }
