@@ -64,54 +64,19 @@ $(document).ready(function() {
 		}
 	);
 
-	$(".hexFilled").attr("fill","#0000ff");
-	$(".svgHoneycomb").attr("width","40px");
-
-	$(".hexFilled").click(function(){
-		$(this).attr("class", "hexFilled shiny");
-	});
-
-	// Instead of .addClass("newclass")
-	//$("#item").attr("class", "oldclass newclass");
-	// Instead of .removeClass("newclass")
-	//$("#item").attr("class", "oldclass");
-
-
-
 	$('#fb').svg({loadURL: "images/fb.svg"});
-	checkCorsSvg($('#fb'));
-	// var fbg = $('#fb').svg('get');
-	// if ($(fbg.root()).attr("class" == null)) {
-	// 	$(fbg.root()).addClass("noShow");
-	// 	$("#fb img").removeClass("noShow");
-	// };
-
 	$('#twitter').svg({loadURL: "images/twitter.svg"});
-	var twg = $('#twitter').svg('get');
-	if ($(twg.root()).attr("class" == null)) {
-		$(twg.root()).addClass("noShow");
-		$("#twitter img").removeClass("noShow");
-	};
 	
-	//$(svg.root()).addClass("social");
-	//svg.load("../images/twohex.svg"); 
-	//resetSize(svg);
+	$("div.social").each(function() {
+		checkCorsSvg($(this));
+	});
 	
-	//console.log($("#catalystName").css("top"));
-	//$("#catalystName").append(" - " + $("#catalystName").css("top") + " - " + $("#catalystName").height() + " - " + $("#logo").height());
-
-	// $(".blogVid").each(function() {
-	//     $(this).fitVids();
-	// });
 
 	titleResize();
+
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
 	//console.log(contTop);
-
-	$("object").click(function(){
-		alert("yes");
-	})
 });
 
 $(window).onerror = function (message, filename, linenumber) {
