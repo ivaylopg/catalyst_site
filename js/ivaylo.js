@@ -67,7 +67,7 @@ $(document).ready(function() {
 	$('#fb').svg({loadURL: "images/fb.svg"});
 	$('#twitter').svg({loadURL: "images/twitter.svg"});
 	
-	$("div.social").each(function() {
+	$("div.hasSVG").each(function() {
 		checkCorsSvg($(this));
 	});
 	
