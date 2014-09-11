@@ -31,11 +31,12 @@ function titleResize() {
 
 	var fontSize = 12;
 	while($('#sizer').width() < titleWidth-5){
-		$('#sizer').css("font-size",fontSize++ + "pt");
+		$('#sizer').css("font-size",fontSize++ + "px");
 	}
 	//console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
-	$("#sizer").css("font-size","12pt");
-	$("#catalystName").css("font-size",fontSize + "pt");
+	$("#sizer").css("font-size","12px");
+	$("#catalystName").css("font-size",fontSize + "px");
+	$(".pageTitle").css("font-size",fontSize-2 + "px");
 
 	var titlePosRatio = 0.513699;
 	var logoH = $("#logo").height()

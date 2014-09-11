@@ -24,7 +24,8 @@ body {
 
 	font-family: 'Exo 2', serif;
 	font-weight: 200;
-	font-size: 12px;
+	/*font-size: 12px;*/
+	font-size: 100%;
 	color: #ffffff;
 	overflow: auto;
 }
@@ -39,7 +40,7 @@ a:hover {
 }
 
 .small {
-	font-size: 10px;
+	font-size: 0.8em;
 }
 
 #backImage {
@@ -98,7 +99,7 @@ a:hover {
 
 #content {
 	position: absolute;
-	font-size: 13px;
+	font-size: 0.8em;
 	font-weight: 200;
 	width: 40%;
 	height: auto;
@@ -121,6 +122,7 @@ a:hover {
 	background-color: #333333;
 	z-index: 901;
 	line-height: 30px;
+	font-size: 14px;
 }
 
 #footercontent {
@@ -149,7 +151,7 @@ a:hover {
 	visibility: hidden;
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 300;
-	font-size: 12pt;
+	font-size: 12px;
 	position: fixed;
 	width: auto;
 	height: auto;
@@ -161,7 +163,16 @@ a:hover {
 	*/
 }
 
+.fixed {
+	position: fixed !important;
+}
+
+/*
+ * Blog Styles
+ */
+
 #blogBackImage {
+	/*
 	position: absolute;
 	width: 100%;
 	height: 60%;
@@ -170,20 +181,120 @@ a:hover {
 	background: url(../images/back3.jpg);
 	background-size: 100%;
 	background-position: 0 0;
+	*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/back3.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #blogBg {
 	position: absolute;
 	width: 100%;
-	height: 400px;
+	height: auto;
 	top: 60%;
 	left: 0px;
-	background-color: #777777;
 }
 
-.fixed {
-	position: fixed !important;
+#blogBgColor {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(100,100,100,0.95);
 }
+
+
+div.navigation {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+}
+
+a.navLink {
+
+}
+
+.pageTitle {
+	font-size: 2em;
+	font-weight: 200;
+	color: #FBF49C;
+	position: absolute;
+	top: 10px;
+	left: 12%;
+	width: 60%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	
+	background-color: #333333;
+	border-left: solid;
+	border-color: #000000;
+	border-width: 5px;
+	
+}
+
+.blogContent {
+	position: relative;
+	font-size: 0.8em;
+	font-weight: 200;
+	width: 60%;
+	height: auto;
+	margin-top: 80px;
+	top: 0px;
+	left: 12%;
+	background: rgba(51, 51, 51, 0.95);
+	padding: 10px;
+	margin-bottom: 50px;
+	border-left: solid;
+	border-color: #000000;
+	border-width: 5px;
+}
+
+.entry {
+	/*background-color: #000000;*/
+	margin-bottom: 2em;
+}
+
+.entry p {
+	font-family: 'Merriweather', serif;
+	font-weight: 200;
+	font-size: 0.9em;
+}
+
+.endPost {
+	width: 70%;
+	height: 2em;
+	margin: 0 auto;
+	border-bottom: solid;
+	border-color: #222222;
+	border-width: 1px;
+
+}
+
+.postTitle {
+	font-size: 1.25em;
+}
+
+.date {
+	font-size: 1.1em;
+	padding-bottom: 1em;
+}
+
+.tags {
+
+}
+
+
+/****************************************************/
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
 	#headerComb img {
@@ -229,7 +340,7 @@ a:hover {
 	}
 
 	#content {
-		font-size: 13px;
+		font-size: 0.875em;
 		width: 70%;
 		top: 20%;
 		left: 12%;
