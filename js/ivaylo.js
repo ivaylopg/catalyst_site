@@ -12,8 +12,8 @@ jQuery.browser = {};
 
 function checkCorsSvg(sel) {
 	var svg = sel.svg('get');
-	if ($(svg.root()).attr("class" == null)) {
-		console.log("null shit");
+	if ($(svg.root()).attr("class") == null) {
+		//console.log("null shit");
 		$(svg.root()).addClass("noShow");
 		sel.children('img').removeClass("noShow");
 	};
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		}
 	);
 
-	$('#fb').svg({loadURL: "images/fb.svg", onLoad: alert("yes")});
+	$('#fb').svg({loadURL: "images/fb.svg"});
 	$('#twitter').svg({loadURL: "images/twitter.svg"});
 	
 	$("div.hasSVG").each(function() {
