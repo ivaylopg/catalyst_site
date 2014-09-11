@@ -65,14 +65,14 @@ a:hover {
 }
 
 #headerComb {
-	position: fixed;
+	position: absolute;
 	top: 0px;
 	right: 0px;
 	width: 100%;
 }
 
 #logoHover {
-	position: fixed;
+	position: absolute;
 	top: 1%;
 	left: 3%;
 	width: 8%;
@@ -86,7 +86,7 @@ a:hover {
 #catalystName {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 300;
-	position: fixed;
+	position: absolute;
 	width: auto;
 	height: auto;
 	font-size: 38px;
@@ -159,6 +159,30 @@ a:hover {
 	left: 12%;
 	visibility: visible;
 	*/
+}
+
+#blogBackImage {
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/back3.jpg);
+	background-size: 100%;
+	background-position: 0 0;
+}
+
+#blogBg {
+	position: absolute;
+	width: 100%;
+	height: 400px;
+	top: 60%;
+	left: 0px;
+	background-color: #777777;
+}
+
+.fixed {
+	position: fixed !important;
 }
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {

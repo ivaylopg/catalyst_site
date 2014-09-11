@@ -67,10 +67,12 @@ $(document).ready(function() {
 
 	$('#fb').svg({loadURL: "images/fb.svg"});
 	$('#twitter').svg({loadURL: "images/twitter.svg"});
-	
+
+	/*
 	$("div.hasSVG").each(function() {
 		checkCorsSvg($(this));
 	});
+	*/
 	
 
 	titleResize();
@@ -79,10 +81,6 @@ $(document).ready(function() {
 	$("#content").css("top",contTop + "px");
 	//console.log(contTop);
 });
-
-$(window).onerror = function (message, filename, linenumber) {
-	alert("JS error: " + message + " on line " + linenumber + " for " + filename);
-}
 
 on_resize(function() {
 	//console.log("resized");
