@@ -13,6 +13,7 @@ jQuery.browser = {};
 function checkCorsSvg(sel) {
 	var svg = sel.svg('get');
 	if ($(svg.root()).attr("class" == null)) {
+		//console.log("null shit");
 		$(svg.root()).addClass("noShow");
 		sel.children('img').removeClass("noShow");
 	};
