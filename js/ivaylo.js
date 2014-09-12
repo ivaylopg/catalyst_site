@@ -19,7 +19,7 @@ function loadDone(svg, error){
 		$(this).append("<img src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 	} else {
-		if ($(this).attr("data-source").indexOf(honeycomb) >= 0) {
+		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			alert("yessss");
 		};
 	};
