@@ -13,9 +13,11 @@ jQuery.browser = {};
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
 		//$(this).children('img').removeClass("noShow");
-		$(this).append("<img src=" + $(this).attr("data-source") + " />");
+		$(this).append("<img src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 	}
+
+	console.log($($('.hcCell'), svg.root()).attr("fill"));
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
 
@@ -79,9 +81,13 @@ $(document).ready(function() {
 	*/
 
 	$(".social").each(function(){
-		$(this).svg();
-		var svg = $(this).svg('get');
-		svg.load($(this).attr("data-source"), {onLoad: loadDone});
+		if (Modernizr.svg) {
+			$(this).svg();
+			var svg = $(this).svg('get');
+			svg.load($(this).attr("data-source")+".svg", {onLoad: loadDone});
+		} else {
+			$(this).append("<img src=" + $(this).attr("data-source") + ".png" + "class='social' />");
+		};
 	});
 	
 
@@ -90,6 +96,16 @@ $(document).ready(function() {
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
 	//console.log(contTop);
+
+	$(".headerSvg").each(function(){
+		if (Modernizr.svg) {
+			$(this).svg();
+			var svg = $(this).svg('get');
+			svg.load($(this).attr("data-source")+".svg", {onLoad: loadDone});
+		} else {
+			$(this).append("<img src=" + $(this).attr("data-source") + ".png" + " />");
+		};
+	});
 });
 
 on_resize(function() {
