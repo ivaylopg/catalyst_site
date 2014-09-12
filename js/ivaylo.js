@@ -11,17 +11,23 @@ jQuery.browser = {};
 })();
 //*/
 
+var hcLoaded = false;
+
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
 		//$(this).children('img').removeClass("noShow");
 		$(this).append("<img src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
-	}
+	} else {
+		if ($(this).attr("data-source").indexOf(honeycomb) >= 0) {
+			alert("yessss");
+		};
+	};
 
 	
-	$($('#hcBackground'), svg.root()).css("width", "100%");
-	$(svg.root()).css("width", "100%");
-	console.log($($('.hcCell'), svg.root()).attr("fill"));
+	//$($('#hcBackground'), svg.root()).css("width", "100%");
+	//$(svg.root()).css("width", "100%");
+	//console.log($($('.hcCell'), svg.root()).attr("fill"));
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
 
