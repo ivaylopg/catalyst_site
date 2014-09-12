@@ -1,4 +1,5 @@
 //*
+
 jQuery.browser = {};
 (function () {
     jQuery.browser.msie = false;
@@ -57,6 +58,9 @@ function titleResize() {
 $(document).ready(function() {
 	var hoverBox = $("#logoHover");
 	hoverBox.css({"height":hoverBox.width(),"background":"none"});
+
+	var combHeight = $("#headerComb").width() * 0.58092105263158;
+	$("#headerComb").css("height",combHeight);
 
 
 	$("#logoHover").hover(
