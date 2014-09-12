@@ -17,11 +17,6 @@
         -->
 
         <link href='http://fonts.googleapis.com/css?family=Lora|Exo+2:200,400,300|Roboto+Slab:200,400,300|Merriweather:200,400,300,700' rel='stylesheet' type='text/css'>
-        
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.svg.min.js"></script>
-        <script type="text/javascript" src="js/jquery.svgdom.min.js"></script>
-        <script type="text/javascript" src="js/ivaylo.js"></script>
 
         <!--
         <script type="text/javascript" src="//use.typekit.net/csr3qxg.js"></script>
@@ -94,6 +89,20 @@
         </div>
     </div>
 
- 
+    <!-- jQuery  -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <!-- Plugins -->
+    <script type="text/javascript" src="js/jquery.svg.min.js"></script>
+    <script type="text/javascript" src="js/jquery.svgdom.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/ivaylo.js"></script>
+
 </body>
 </html>
