@@ -18,6 +18,8 @@ function loadDone(svg, error){
 		$(svg.root()).addClass("noShow");
 	}
 
+	
+	$($('#hcBackground'), svg.root()).css("width", "100%");
 	console.log($($('.hcCell'), svg.root()).attr("fill"));
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
@@ -118,6 +120,8 @@ on_resize(function() {
 	hoverBox.css("height",hoverBox.width());
 	//console.log(hoverBox.width());
 
+	var combHeight = $("#headerComb").width() * 0.58092105263158;
+	$("#headerComb").css("height",combHeight);
 
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
