@@ -140,8 +140,8 @@ on_resize(function() {
 
 	if (hcLoaded) {
 		//hdSvg = svg;
-		$($('#hcBackground'), svg.root()).css("width", "100%");
-		$(svg.root()).css("width", "100%");
+		$($('#hcBackground'), hdSvg.root()).css("width", "100%");
+		$(hdSvg.root()).css("width", "100%");
 		//console.log($($('.hcCell'), hdSvg.root()).attr("fill"));
 	};
 
