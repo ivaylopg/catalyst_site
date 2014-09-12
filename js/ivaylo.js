@@ -10,21 +10,11 @@ jQuery.browser = {};
 })();
 //*/
 
-function checkCorsSvg(sel) {
-	var svg = sel.svg('get');
-	if ($(svg.root()).attr("class") == null) {
-		console.log($(svg.root()).attr("class"));
-		$(svg.root()).addClass("noShow");
-		sel.children('img').removeClass("noShow");
-	};
-};
-
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
 		$(this).children('img').removeClass("noShow");
 		$(svg.root()).addClass("noShow");
 	}
-
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
 
@@ -75,20 +65,13 @@ $(document).ready(function() {
 		}
 	);
 
-	//$('#fb').svg({loadURL: "images/fb.svg"});
 	$('#fb').svg();
 	var fbsvg = $('#fb').svg('get');
 	fbsvg.load("images/fb.svg", {onLoad: loadDone});
 
-
-	$('#twitter').svg({loadURL: "images/twitter.svg"});
-
-	/*
-	$("div.hasSVG").each(function() {
-		checkCorsSvg($(this));
-	});
-	*/
-	
+	$('#twitter').svg();
+	var twsvg = $('#twitter').svg('get');
+	twsvg.load("images/twitter.svg", {onLoad: loadDone});
 
 	titleResize();
 
