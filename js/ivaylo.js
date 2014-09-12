@@ -12,6 +12,7 @@ jQuery.browser = {};
 //*/
 
 var hcLoaded = false;
+var hdSvg;
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
@@ -20,14 +21,17 @@ function loadDone(svg, error){
 		$(svg.root()).addClass("noShow");
 	} else {
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
-			alert("yessss");
+			hcLoaded = true;
+			hdSvg = svg;
+			$($('#hcBackground'), svg.root()).css("width", "100%");
+			$(svg.root()).css("width", "100%");
+			//console.log($($('.hcCell'), svg.root()).attr("fill"));
 		};
 	};
 
 	
-	//$($('#hcBackground'), svg.root()).css("width", "100%");
-	//$(svg.root()).css("width", "100%");
-	//console.log($($('.hcCell'), svg.root()).attr("fill"));
+	
+	
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
 
@@ -133,6 +137,13 @@ on_resize(function() {
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
+
+	if (hcLoaded) {
+		//hdSvg = svg;
+		//$($('#hcBackground'), svg.root()).css("width", "100%");
+		//$(svg.root()).css("width", "100%");
+		console.log($($('.hcCell'), hdSvg.root()).attr("fill"));
+	};
 
 })();
 
