@@ -12,7 +12,8 @@ jQuery.browser = {};
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
-		$(this).children('img').removeClass("noShow");
+		//$(this).children('img').removeClass("noShow");
+		$(this).append("<img src=" + $(this).attr("data-source") + " />");
 		$(svg.root()).addClass("noShow");
 	}
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
@@ -65,13 +66,24 @@ $(document).ready(function() {
 		}
 	);
 
-	$('#fb').svg();
-	var fbsvg = $('#fb').svg('get');
-	fbsvg.load("images/fb.svg", {onLoad: loadDone});
+	/*
+	if (Modernizr.svg) {
+		$('#fb').svg();
+		var fbsvg = $('#fb').svg('get');
+		fbsvg.load("images/fb.svg", {onLoad: loadDone});
 
-	$('#twitter').svg();
-	var twsvg = $('#twitter').svg('get');
-	twsvg.load("images/twitter.svg", {onLoad: loadDone});
+		$('#twitter').svg();
+		var twsvg = $('#twitter').svg('get');
+		twsvg.load("images/twitter.svg", {onLoad: loadDone});
+	};
+	*/
+
+	$(".social").each(function(){
+		$(this).svg();
+		var svg = $(this).svg('get');
+		svg.load($(this).attr("data-source"), {onLoad: loadDone});
+	});
+	
 
 	titleResize();
 
