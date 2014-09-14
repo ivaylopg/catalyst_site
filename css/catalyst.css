@@ -57,12 +57,11 @@ a:hover {
 }
 
 
-#headerComb img, .headerSvg img, .headerSvg {
+#headerComb img, .headerSvg img, .headerSvg .svgImg, .headerSvg {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 100%;
 }
 
 #headerComb {
@@ -308,7 +307,7 @@ a.navLink {
 /****************************************************/
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
-	#headerComb img, .headerSvg img, .headerSvg {
+	#headerComb img, .headerSvg img, .headerSvg .svgImg, .headerSvg {
 		width: 110%;
 		height: auto;
 	}
@@ -334,7 +333,7 @@ a.navLink {
 }
 
 @media only screen and (max-width: 700px) {
-	#headerComb img, .headerSvg img, .headerSvg {
+	#headerComb img, .headerSvg img, .headerSvg .svgImg, .headerSvg {
 		width: 120%;
 		height: auto;
 	}

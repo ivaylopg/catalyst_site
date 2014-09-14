@@ -17,7 +17,7 @@ var hdSvg;
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
 		//$(this).children('img').removeClass("noShow");
-		$(this).append("<img src=" + $(this).attr("data-source") + ".svg" + " />");
+		$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 	} else {
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
 			var svg = $(this).svg('get');
 			svg.load($(this).attr("data-source")+".svg", {onLoad: loadDone});
 		} else {
-			$(this).append("<img src=" + $(this).attr("data-source") + ".png" + " />");
+			$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".png" + " />");
 		};
 	});
 });
