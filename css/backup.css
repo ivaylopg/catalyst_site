@@ -1,0 +1,382 @@
+//////////****** Backup ***/////////
+
+/* 
+ * Catalyst Styles
+ */
+
+/*
+font-family: 'Lora', serif;  400
+font-family: 'Exo 2', sans-serif; 300 400
+font-family: 'Roboto Slab', serif; 300 400
+font-family: 'Merriweather', serif; 300 400 700
+
+*/
+
+
+/*
+html, body {
+	width:      100%;
+    height:     100%;
+    overflow:   hidden;
+}
+*/
+body {
+	background-color: #333333;
+	/*If you want to add IE: http://css-tricks.com/perfect-full-page-background-image/ */
+
+	font-family: 'Exo 2', serif;
+	font-weight: 200;
+	/*font-size: 12px;*/
+	font-size: 100%;
+	color: #ffffff;
+	overflow: auto;
+}
+
+a {
+	color: #FBF49C;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.small {
+	font-size: 0.8em;
+}
+
+#backImage {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/back5.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+#headerComb img, .headerSvg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+}
+
+#headerComb {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+}
+
+#logoHover {
+	position: absolute;
+	top: 1%;
+	left: 3%;
+	width: 8%;
+	height: 1px;
+	z-index: 999;
+	background: none;
+	background-color: none;
+	cursor: pointer;
+}
+
+#catalystName {
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	position: absolute;
+	width: auto;
+	height: auto;
+	font-size: 38px;
+	color: #FBF49C;
+	top: 8%;
+	left: 12%;
+
+}
+
+#content {
+	position: absolute;
+	font-size: 0.8em;
+	font-weight: 200;
+	width: 40%;
+	height: auto;
+	top: 20%;
+	left: 12%;
+	/*background: #333333;*/
+	background: rgba(51, 51, 51, 0.95);
+	padding: 10px;
+	overflow: scroll;
+	margin-bottom: 50px;
+
+}
+
+#footer {
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	background-color: #333333;
+	z-index: 901;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#footercontent {
+	padding-left: 12%;
+}
+
+.social, .socialLink {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+.social img {
+	width: 100%;
+	height: auto;
+}
+
+#fb {
+	padding-left: 10px;
+}
+
+#sizer {
+	visibility: hidden;
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	position: fixed;
+	width: auto;
+	height: auto;
+	/*
+	background: rgba(255,0,0,0.9);
+	top: 8%;
+	left: 12%;
+	visibility: visible;
+	*/
+}
+
+.fixed {
+	position: fixed !important;
+}
+
+/*
+ * Blog Styles
+ */
+
+#blogBackImage {
+	/*
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/back3.jpg);
+	background-size: 100%;
+	background-position: 0 0;
+	*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: url(../images/back3.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#blogBg {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 60%;
+	left: 0px;
+}
+
+#blogBgColor {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(100,100,100,0.95);
+}
+
+
+#navigation {
+	position: absolute;
+	top: 0px;
+	left: 12%;
+	width: 60%;
+	text-align: right;
+	margin-top: -32px;
+	margin-left: 15px;
+	font-size: 0.95em;
+	font-weight: 300;
+}
+
+a.navLink {
+	display: inline-block;
+	padding: 5px;
+	padding-bottom: 10px;
+	background-color: rgba(100,100,100,0.95);
+}
+
+.pageTitle {
+	font-size: 2em;
+	font-weight: 200;
+	color: #FBF49C;
+	position: absolute;
+	top: 10px;
+	left: 12%;
+	width: 60%;
+	padding-left: 10px;
+	padding-bottom: 15px;
+	
+	background-color: #333333;
+	border-left: solid;
+	border-color: #000000;
+	border-width: 5px;
+	
+}
+
+.blogContent {
+	position: relative;
+	font-size: 0.8em;
+	font-weight: 200;
+	width: 60%;
+	height: auto;
+	margin-top: 80px;
+	top: 0px;
+	left: 12%;
+	margin-bottom: 50px;
+}
+
+.entry {
+	/*background-color: #000000;*/
+	background: rgba(51, 51, 51, 0.95);
+	padding: 10px;
+	margin-right: -15px;
+	margin-bottom: 2em;
+	border-left: solid;
+	border-color: #000000;
+	border-width: 5px;
+}
+
+.entry p {
+	font-family: 'Merriweather', serif;
+	font-weight: 200;
+	font-size: 0.9em;
+}
+
+.endPost {
+	display: none;
+	width: 70%;
+	height: 2em;
+	margin: 0 auto;
+	border-bottom: solid;
+	border-color: #222222;
+	border-width: 1px;
+
+}
+
+.postTitle {
+	font-size: 1.25em;
+}
+
+.date {
+	font-size: 1.1em;
+	padding-bottom: 1em;
+}
+
+.tags {
+	width: 100%;
+	text-align: right;
+}
+
+
+/****************************************************/
+
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+	#headerComb img, .headerSvg {
+		width: 110%;
+		height: auto;
+	}
+
+	#headerComb {
+		left: 0px;
+		width: 110%;
+	}
+
+	#logoHover {
+		left: 3.3%;
+		width: 8.8%;
+		cursor: pointer;
+	}
+
+	#catalystName, #content, #sizer {
+		left: 14%;
+	}
+
+	#footercontent {
+		padding-left: 14%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#headerComb img, .headerSvg {
+		width: 120%;
+		height: auto;
+	}
+
+	#headerComb {
+		left: 0px;
+		width: 120%;
+	}
+
+	#logoHover {
+		left: 3.6%;
+		width: 9.6%;
+		cursor: pointer;
+	}
+
+	#content {
+		font-size: 0.875em;
+		width: 70%;
+		top: 20%;
+		left: 12%;
+	}
+}
+
+svg\:svg {
+	display: none;
+}
+
+
+
+.noShow {
+	display: none;
+}
+.svg_error {
+	color: red;
+	font-weight: bold;
+}
+
+.fallback { 
+  display: none;
+  /* Make sure it's the same size as the SVG takes up */
+}
+.no-svg .fallback { 
+  display: inline-block;
+}

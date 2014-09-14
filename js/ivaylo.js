@@ -72,7 +72,8 @@ $(document).ready(function() {
 	var hoverBox = $("#logoHover");
 	hoverBox.css({"height":hoverBox.width(),"background":"none"});
 
-	var combHeight = $("#headerComb").width() * 0.58092105263158;
+	//var combHeight = $("#headerComb").width() * 0.58092105263158;
+	var combHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",combHeight);
 
 
@@ -131,7 +132,8 @@ on_resize(function() {
 	hoverBox.css("height",hoverBox.width());
 	//console.log(hoverBox.width());
 
-	var combHeight = $("#headerComb").width() * 0.58092105263158;
+	//var combHeight = $("#headerComb").width() * 0.58092105263158;
+	var combHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",combHeight);
 
 	titleResize();
