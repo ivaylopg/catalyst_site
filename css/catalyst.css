@@ -95,7 +95,7 @@ a:hover {
 
 #hcBackground {
 	width: 100%;
-	height: 100px !important;
+	height: auto !important;
 }
 
 .hcCell {
