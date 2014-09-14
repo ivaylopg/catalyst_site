@@ -22,11 +22,7 @@ function loadDone(svg, error){
 		//$(this).css("height", "auto");
 		//console.log($(this));
 	} else {
-		$(svg.root()).attr("style","width:100%;height: auto");
-		//$(svg.root()).attr("height","auto");
-		$(svg.root()).removeAttr("height");
-		$(svg.root()).removeAttr("width");
-
+		//$(svg.root()).attr("style","width:100%;height: auto");
 		/*
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			hcLoaded = true;
@@ -151,8 +147,8 @@ on_resize(function() {
 
 	if (hcLoaded) {
 		//hdSvg = svg;
-		$($('#hcBackground'), hdSvg.root()).css("width", "100%");
-		$(hdSvg.root()).css("width", "100%");
+		$($('#hcBackground'), hdSvg.root()).css({"width": "100%","height": "auto"});
+		$(hdSvg.root()).css({"width": "100%","height": "50%"});
 		//console.log($($('.hcCell'), hdSvg.root()).attr("fill"));
 	};
 
