@@ -131,6 +131,8 @@ $(document).ready(function() {
 	//console.log(contTop);
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
+
+	//if ($('#content').position().top+$('#content').outerHeight(false) > $(window).innerHeight()) {
 });
 
 on_resize(function() {
@@ -156,6 +158,7 @@ on_resize(function() {
 	};
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
+
 })();
 
 
