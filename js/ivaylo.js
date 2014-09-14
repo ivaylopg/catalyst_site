@@ -15,6 +15,7 @@ var hcLoaded = false;
 var logoLoaded = false;
 var hcHeight;
 var logoHeight;
+var doRollover = false;
 
 
 function loadDone(svg, error){
@@ -83,10 +84,14 @@ $(document).ready(function() {
 
 	$("#logoHover").hover(
 		function(){
-			$("#logo").attr('src','images/dopamine.svg');//////////////////////////////////////////////////////////////////////////////////////
+			if ($("#logo img").attr("data-type") != null || $("#logo img").attr("data-type") != undefined) {
+				$("#logo img").attr('src','images/dopamine.' + $("#logo img").attr("data-type"));
+			};
 		},
 		function(){
-			$("#logo").attr('src','images/dopamineman.svg');
+			if ($("#logo img").attr("data-type") != null || $("#logo img").attr("data-type") != undefined) {
+				$("#logo img").attr('src','images/dopamineman.' + $("#logo img").attr("data-type"));
+			};
 		}
 	);
 
