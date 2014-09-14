@@ -28,7 +28,8 @@ function loadDone(svg, error){
 			// $(svg.root()).css("width", "100%");
 			//console.log($($('.hcCell'), svg.root()).attr("fill"));
 			$(".headerSvg").css("height","auto");
-			$("#hcBackground").css("height","300px");
+			var hh = $("#headerComb").height();
+			$("#hcBackground").css("height",hh+"px");
 		};
 		//*/
 	};
