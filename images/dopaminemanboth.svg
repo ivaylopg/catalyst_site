@@ -12,6 +12,10 @@
 			252.2,48.8 285,30 		"/>
 		<polyline fill="none" stroke="#FBF49C" stroke-width="5" stroke-miterlimit="10" points="24.4,122.8 55.6,104.8 104.7,133.1 
 			104.7,170.4 		"/>
+
+		<line class="bonds" stroke-opacity="0" fill="none" stroke="#FBF49C" stroke-width="5" stroke-miterlimit="10" x1="104.7" y1="31.4" x2="144.2" y2="54.3"/>
+		<line class="bonds" stroke-opacity="0" fill="none" stroke="#FBF49C" stroke-width="5" stroke-miterlimit="10" x1="65.1" y1="99.9" x2="65.1" y2="54.3"/>
+		<line class="bonds" stroke-opacity="0" fill="none" stroke="#FBF49C" stroke-width="5" stroke-miterlimit="10" x1="144.2" y1="99.9" x2="104.7" y2="122.8"/>
 		<!--<path class="vman" fill="#4F53A3" d="M137.9,69.1"/>
 		<path class="vman" fill="#4F53A3" d="M98.4,46.2"/>
 		<path class="vman" fill="#4F53A3" d="M58.8,69.1"/>
