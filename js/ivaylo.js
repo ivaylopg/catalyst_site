@@ -45,9 +45,9 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)}
 
 function titleResize() {
 	var sizerRatio = 0.17;
-	if ($(window).innerWidth() <= 1024) {
-		sizerRatio = 0.195;
-	};
+	// if ($(window).innerWidth() <= 1024) {
+	// 	sizerRatio = 0.195;
+	// };
 	var titleWidth = sizerRatio * $("#headerComb").width();
 
 	var fontSize = 12;

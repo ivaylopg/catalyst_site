@@ -99,7 +99,7 @@ a:hover {
 }
 
 .hcCell {
-	fill: red;
+	/*fill: red;*/
 }
 
 #catalystName {
@@ -352,13 +352,13 @@ a.navLink {
 		cursor: pointer;
 	}
 
-	#catalystName, #content, #sizer {
+	/*#catalystName, #content, #sizer {
 		left: 14%;
 	}
 
 	#footercontent {
 		padding-left: 14%;
-	}
+	}*/
 }
 
 @media only screen and (max-width: 700px) {
