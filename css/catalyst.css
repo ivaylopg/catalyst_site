@@ -77,6 +77,10 @@ a:hover {
 	height: 200px;
 }
 
+#hacBackground {
+	height: auto;
+}
+
 #logoHover {
 	position: absolute;
 	top: 1%;
