@@ -19,7 +19,9 @@ function loadDone(svg, error){
 		//$(this).children('img').removeClass("noShow");
 		$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
-		$(this).css("height", "auto");
+		$(svg.root()).atrr("style","{width:100%; height: auto");
+		//$(this).css("height", "auto");
+		//console.log($(this));
 	} else {
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			hcLoaded = true;
