@@ -163,6 +163,7 @@ on_resize(function() {
 	};
 	if (logoLoaded) {
 		$("#svgLogo").css("height",logoHeight+"px");
+		console.log(logoHeight);
 	};
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
