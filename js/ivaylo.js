@@ -134,10 +134,11 @@ on_resize(function() {
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
+	hcHeight = $('#headerComb').width() * 0.58092105263158;
+		$("#headerComb").css("height",hcHeight + "px");
 
 	if (hcLoaded) {
-		hcHeight = $('#headerComb').width() * 0.58092105263158;
-		$("#headerComb").css("height",hcHeight + "px");
+		
 		$("#hcBackground").css("height",hcHeight+"px");
 	};
 
