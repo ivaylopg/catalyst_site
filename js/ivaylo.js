@@ -90,7 +90,7 @@ $(document).ready(function() {
 		},
 		function(){
 			if ($("#logo img").attr("data-type") != null || $("#logo img").attr("data-type") != undefined) {
-				$("#logo img").attr('src','images/dopamineman.' + $("#logo img").attr("data-type"));
+				$("#logo img").attr('src','images/dopaminemanboth.' + $("#logo img").attr("data-type"));
 			};
 		}
 	);
