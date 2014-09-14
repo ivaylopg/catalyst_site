@@ -16,7 +16,7 @@ var logoLoaded = false;
 var hcHeight;
 var logoHeight;
 var doRollover = false;
-
+//58092105263158
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
@@ -146,7 +146,7 @@ on_resize(function() {
 	hcHeight = $('#headerComb').width() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
 	logoHeight = $('#headerComb').width() * 0.11845286;
-	$("#logo").css("height","auto");
+	$("#logo").css("height",logoHeight + "px");
 
 	if (hcLoaded) {
 		$("#hcBackground").css("height",hcHeight+"px");
