@@ -16,27 +16,22 @@ var hdSvg;
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
-		//$(this).children('img').removeClass("noShow");
 		$(this).append("<img class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
-		//$(this).css("height", "auto");
-		//console.log($(this));
 	} else {
 		//$(svg.root()).attr("style","width:100%;height: auto");
-		/*
+		//*
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
-			hcLoaded = true;
-			hdSvg = svg;
-			$($('#hcBackground'), svg.root()).css("width", "100%");
-			$(svg.root()).css("width", "100%");
+			// hcLoaded = true;
+			// hdSvg = svg;
+			// $($('#hcBackground'), svg.root()).css("width", "100%");
+			// $(svg.root()).css("width", "100%");
 			//console.log($($('.hcCell'), svg.root()).attr("fill"));
+			$(".headerSvg").css("height","auto");
 		};
-		*/
+		//*/
 	};
 
-	
-	
-	
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
 }
 
@@ -77,7 +72,7 @@ $(document).ready(function() {
 	var hoverBox = $("#logoHover");
 	hoverBox.css({"height":hoverBox.width(),"background":"none"});
 
-	//var combHeight = $("#headerComb").width() * 0.58092105263158;
+	//var combHeight = $("#headerComb").width() * 0.58092105263158; ////////////////////////////////////////////////////////////////////////////
 	var combHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",combHeight);
 
@@ -91,18 +86,6 @@ $(document).ready(function() {
 		}
 	);
 
-	/*
-	if (Modernizr.svg) {
-		$('#fb').svg();
-		var fbsvg = $('#fb').svg('get');
-		fbsvg.load("images/fb.svg", {onLoad: loadDone});
-
-		$('#twitter').svg();
-		var twsvg = $('#twitter').svg('get');
-		twsvg.load("images/twitter.svg", {onLoad: loadDone});
-	};
-	*/
-
 	$(".social").each(function(){
 		if (Modernizr.svg) {
 			$(this).svg();
@@ -114,12 +97,7 @@ $(document).ready(function() {
 	});
 	
 
-	titleResize();
-
-	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
-	$("#content").css("top",contTop + "px");
-	//console.log(contTop);
-
+	
 	$(".headerSvg").each(function(){
 		if (Modernizr.svg) {
 			$(this).svg();
@@ -129,6 +107,13 @@ $(document).ready(function() {
 			$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".png" + " />");
 		};
 	});
+
+
+	titleResize();
+
+	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
+	$("#content").css("top",contTop + "px");
+	//console.log(contTop);
 });
 
 on_resize(function() {
