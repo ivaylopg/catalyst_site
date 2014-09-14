@@ -12,6 +12,7 @@ jQuery.browser = {};
 //*/
 
 var hcLoaded = false;
+var logoLoaded = false;
 var hcHeight;
 var logoHeight;
 
@@ -21,20 +22,17 @@ function loadDone(svg, error){
 		$(this).append("<img class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 	} else {
-		//$(svg.root()).attr("style","width:100%;height: auto");
-		//*
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			hcLoaded = true;
-			// hdSvg = svg;
-			// $($('#hcBackground'), svg.root()).css("width", "100%");
-			// $(svg.root()).css("width", "100%");
-			//console.log($($('.hcCell'), svg.root()).attr("fill"));
 			hcHeight = $('#headerComb').width() * 0.58092105263158;
-
-			$(".headerSvg").css("height","auto");
+			$("#headerImg").css("height","auto");
 			$("#hcBackground").css("height",hcHeight+"px");
+		} else if ($(this).attr("data-source").indexOf("dopamine") >= 0) {
+			logoLoaded = true;
+			logoHeight = $('#logo').width() * 0.11845286;
+			$("#logo").css("height","auto");
+			$("#svgLogo").css("height",logoHeight+"px");   //////////////////////////Should work. Gotta do resize function. Keep copying from HC bg
 		};
-		//*/
 	};
 
 //error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
@@ -81,10 +79,15 @@ $(document).ready(function() {
 	hcHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
 
+	logoHeight = $(window).innerWidth() * 0.11845286
+	$("#logo").css("height",logoHeight + "px");
+
+	//* 0.11845286
+
 
 	$("#logoHover").hover(
 		function(){
-			$("#logo").attr('src','images/dopamine.svg');
+			$("#logo").attr('src','images/dopamine.svg');/////////////////////////////////
 		},
 		function(){
 			$("#logo").attr('src','images/dopamineman.svg');
@@ -134,18 +137,23 @@ on_resize(function() {
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
+
 	hcHeight = $('#headerComb').width() * 0.58092105263158;
-		$("#headerComb").css("height",hcHeight + "px");
+	$("#headerComb").css("height",hcHeight + "px");
+
+	logoHeight = $('#logo').width() * 0.11845286;
+	$("#logo").css("height","auto");
 
 	if (hcLoaded) {
-		
 		$("#hcBackground").css("height",hcHeight+"px");
+	};
+
+	if (logoLoaded) {
+		$("#svgLogo").css("height",logoHeight+"px");
 	};
 
 })();
 
-// $("#headerComb img", ".headerSvg img", ".headerSvg .svgImg", ".headerSvg").css("height","auto");
-// 	alert("woo");
 
 /*
 $(window).resize(function() {
