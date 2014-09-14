@@ -17,7 +17,7 @@ var hdSvg;
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
 		//$(this).children('img').removeClass("noShow");
-		$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".svg" + " />");
+		$(this).append("<img class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 		//$(this).css("height", "auto");
 		//console.log($(this));
