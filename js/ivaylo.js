@@ -12,7 +12,9 @@ jQuery.browser = {};
 //*/
 
 var hcLoaded = false;
-var hdSvg;
+var hcHeight;
+var logoHeight;
+
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
@@ -22,14 +24,15 @@ function loadDone(svg, error){
 		//$(svg.root()).attr("style","width:100%;height: auto");
 		//*
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
-			// hcLoaded = true;
+			hcLoaded = true;
 			// hdSvg = svg;
 			// $($('#hcBackground'), svg.root()).css("width", "100%");
 			// $(svg.root()).css("width", "100%");
 			//console.log($($('.hcCell'), svg.root()).attr("fill"));
+			hcHeight = $('#headerComb').width() * 0.58092105263158;
+
 			$(".headerSvg").css("height","auto");
-			var hh = $("#headerComb").height();
-			$("#hcBackground").css("height",hh+"px");
+			$("#hcBackground").css("height",hcHeight+"px");
 		};
 		//*/
 	};
@@ -75,8 +78,8 @@ $(document).ready(function() {
 	hoverBox.css({"height":hoverBox.width(),"background":"none"});
 
 	//var combHeight = $("#headerComb").width() * 0.58092105263158; ////////////////////////////////////////////////////////////////////////////
-	var combHeight = $(window).innerWidth() * 0.58092105263158;
-	$("#headerComb").css("height",combHeight);
+	hcHeight = $(window).innerWidth() * 0.58092105263158;
+	$("#headerComb").css("height",hcHeight + "px");
 
 
 	$("#logoHover").hover(
@@ -133,10 +136,9 @@ on_resize(function() {
 	$("#content").css("top",contTop + "px");
 
 	if (hcLoaded) {
-		//hdSvg = svg;
-		$($('#hcBackground'), svg.root()).css("width", "100%");
-		$(svg.root()).css("width", "100%");
-		//console.log($($('.hcCell'), hdSvg.root()).attr("fill"));
+		hcHeight = $('#headerComb').width() * 0.58092105263158;
+		$("#headerComb").css("height",hcHeight + "px");
+		$("#hcBackground").css("height",hcHeight+"px");
 	};
 
 })();

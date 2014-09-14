@@ -330,6 +330,7 @@ a.navLink {
 	}
 
 	#headerComb {
+		top: 0px;
 		left: 0px;
 		width: 110%;
 	}
@@ -356,6 +357,7 @@ a.navLink {
 	}
 
 	#headerComb {
+		top: 0px;
 		left: 0px;
 		width: 120%;
 	}
