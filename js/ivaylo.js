@@ -23,7 +23,7 @@ function loadDone(svg, error){
 		//console.log($(this));
 	} else {
 		$(svg.root()).attr("style","width:100%;height: auto");
-		$(svg.root()).attr("height","120");
+		$(svg.root()).attr("height","auto");
 		/*
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			hcLoaded = true;
