@@ -19,6 +19,7 @@ function loadDone(svg, error){
 		//$(this).children('img').removeClass("noShow");
 		$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
+		$(this).css("height", "auto");
 	} else {
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
 			hcLoaded = true;
@@ -133,8 +134,8 @@ on_resize(function() {
 	//console.log(hoverBox.width());
 
 	//var combHeight = $("#headerComb").width() * 0.58092105263158;
-	var combHeight = $(window).innerWidth() * 0.58092105263158;
-	$("#headerComb").css("height",combHeight);
+	//var combHeight = $(window).innerWidth() * 0.58092105263158;
+	$("#headerComb").css("height","height");
 
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
@@ -149,6 +150,8 @@ on_resize(function() {
 
 })();
 
+// $("#headerComb img", ".headerSvg img", ".headerSvg .svgImg", ".headerSvg").css("height","auto");
+// 	alert("woo");
 
 /*
 $(window).resize(function() {
