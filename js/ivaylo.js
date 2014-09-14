@@ -86,11 +86,15 @@ $(document).ready(function() {
 		function(){
 			if ($("#logo img").attr("data-type") != null || $("#logo img").attr("data-type") != undefined) {
 				$("#logo img").attr('src','images/dopamine.' + $("#logo img").attr("data-type"));
+			} else {
+				$(".vman").css("fill-opacity","0.5");
 			};
 		},
 		function(){
 			if ($("#logo img").attr("data-type") != null || $("#logo img").attr("data-type") != undefined) {
 				$("#logo img").attr('src','images/dopaminemanboth.' + $("#logo img").attr("data-type"));
+			} else {
+				$(".vman").css("fill-opacity","1.0");
 			};
 		}
 	);
