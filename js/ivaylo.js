@@ -30,7 +30,7 @@ function loadDone(svg, error){
 			$("#hcBackground").css("height",hcHeight+"px");
 		} else if ($(this).attr("data-source").indexOf("dopamine") >= 0) {
 			logoLoaded = true;
-			logoHeight = $('#logo').width() * 0.11845286;
+			logoHeight = $('#headerComb').width() * 0.11845286;
 			$("#logo").css("height","auto");
 			$("#svgLogo").css("height",logoHeight+"px");
 		};
@@ -145,7 +145,7 @@ on_resize(function() {
 
 	hcHeight = $('#headerComb').width() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
-	logoHeight = $('#logo').width() * 0.11845286;
+	logoHeight = $('#headerComb').width() * 0.11845286;
 	$("#logo").css("height","auto");
 
 	if (hcLoaded) {
