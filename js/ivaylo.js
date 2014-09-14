@@ -129,6 +129,8 @@ $(document).ready(function() {
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	$("#content").css("top",contTop + "px");
 	//console.log(contTop);
+
+	$("#navigation").css("margin-top",-1 * $("#navigation").height());
 });
 
 on_resize(function() {
@@ -153,6 +155,7 @@ on_resize(function() {
 		$("#svgLogo").css("height",logoHeight+"px");
 	};
 
+	$("#navigation").css("margin-top",-1 * $("#navigation").height());
 })();
 
 
