@@ -394,6 +394,16 @@ a.navLink {
 	}
 }
 
+@media only screen and (max-width: 950px) {
+	#blogBg {
+		top: 40%;
+	}
+
+	.blogContent, .pageTitle, #navigation {
+		width: 70%;
+	}
+}
+
 @media only screen and (max-width: 700px) {
 /*	#headerComb img, .headerSvg img, .headerSvg .svgImg, .headerSvg {
 		width: 120%;
@@ -417,6 +427,15 @@ a.navLink {
 		width: 80%;
 		top: 35%;
 		left: 8%;
+	}
+
+	#blogBg {
+		top: 30%;
+	}
+
+	.blogContent, .pageTitle, #navigation {
+		left: 8%;
+		width: 80%;
 	}
 }
 
