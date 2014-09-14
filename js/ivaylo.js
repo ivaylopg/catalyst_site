@@ -139,7 +139,7 @@ on_resize(function() {
 
 	//var combHeight = $("#headerComb").width() * 0.58092105263158;
 	//var combHeight = $(window).innerWidth() * 0.58092105263158;
-	$("#headerComb").css("height","height");
+	//$("#headerComb").css("height","height");
 
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
@@ -148,7 +148,6 @@ on_resize(function() {
 	if (hcLoaded) {
 		//hdSvg = svg;
 		$($('#hcBackground'), hdSvg.root()).css({"width": "100%","height": "auto"});
-		$(hdSvg.root()).css({"width": "100%","height": "50%"});
 		//console.log($($('.hcCell'), hdSvg.root()).attr("fill"));
 	};
 
