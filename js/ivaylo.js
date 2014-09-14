@@ -19,7 +19,7 @@ var logoHeight;
 
 function loadDone(svg, error){
 	if (error != null || error != undefined) {
-		$(this).append("<img class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
+		$(this).append("<img data-type='svg' class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
 		$(svg.root()).addClass("noShow");
 	} else {
 		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
@@ -31,7 +31,7 @@ function loadDone(svg, error){
 			logoLoaded = true;
 			logoHeight = $('#logo').width() * 0.11845286;
 			$("#logo").css("height","auto");
-			$("#svgLogo").css("height",logoHeight+"px");   //////////////////////////Should work. Gotta do resize function. Keep copying from HC bg
+			$("#svgLogo").css("height",logoHeight+"px");
 		};
 	};
 
@@ -75,19 +75,15 @@ $(document).ready(function() {
 	var hoverBox = $("#logoHover");
 	hoverBox.css({"height":hoverBox.width(),"background":"none"});
 
-	//var combHeight = $("#headerComb").width() * 0.58092105263158; ////////////////////////////////////////////////////////////////////////////
 	hcHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
 
 	logoHeight = $(window).innerWidth() * 0.11845286
 	$("#logo").css("height",logoHeight + "px");
 
-	//* 0.11845286
-
-
 	$("#logoHover").hover(
 		function(){
-			$("#logo").attr('src','images/dopamine.svg');/////////////////////////////////
+			$("#logo").attr('src','images/dopamine.svg');//////////////////////////////////////////////////////////////////////////////////////
 		},
 		function(){
 			$("#logo").attr('src','images/dopamineman.svg');
@@ -100,7 +96,7 @@ $(document).ready(function() {
 			var svg = $(this).svg('get');
 			svg.load($(this).attr("data-source")+".svg", {onLoad: loadDone});
 		} else {
-			$(this).append("<img src=" + $(this).attr("data-source") + ".png" + "class='social' />");
+			$(this).append("<img data-type='png' src=" + $(this).attr("data-source") + ".png" + "class='social' />");
 		};
 	});
 	
@@ -112,7 +108,7 @@ $(document).ready(function() {
 			var svg = $(this).svg('get');
 			svg.load($(this).attr("data-source")+".svg", {onLoad: loadDone});
 		} else {
-			$(this).append("<img class='svgImg' src=" + $(this).attr("data-source") + ".png" + " />");
+			$(this).append("<img data-type='png' class='svgImg' src=" + $(this).attr("data-source") + ".png" + " />");
 		};
 	});
 
@@ -128,11 +124,7 @@ on_resize(function() {
 	//console.log("resized");
 	var hoverBox = $("#logoHover");
 	hoverBox.css("height",hoverBox.width());
-	//console.log(hoverBox.width());
 
-	//var combHeight = $("#headerComb").width() * 0.58092105263158;
-	//var combHeight = $(window).innerWidth() * 0.58092105263158;
-	//$("#headerComb").css("height","height");
 
 	titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
@@ -140,14 +132,12 @@ on_resize(function() {
 
 	hcHeight = $('#headerComb').width() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
-
 	logoHeight = $('#logo').width() * 0.11845286;
 	$("#logo").css("height","auto");
 
 	if (hcLoaded) {
 		$("#hcBackground").css("height",hcHeight+"px");
 	};
-
 	if (logoLoaded) {
 		$("#svgLogo").css("height",logoHeight+"px");
 	};
