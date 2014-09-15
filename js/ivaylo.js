@@ -72,6 +72,11 @@ $(document).ready(function() {
 		};
 	});
 
+	if (!Modernizr.rgba) {
+		$("#content", "#navigationFront .navLink", ".entry").addClass("51_095");
+		$("#blogBgColor", "a.navLink").addClass("100_095");
+	}
+
 
 	titleResize();
 	contTop();
@@ -95,7 +100,7 @@ on_resize(function() {
 	};
 	if (logoLoaded) {
 		$("#svgLogo").css("height",logoHeight+"px");
-		console.log(logoHeight);
+		//console.log(logoHeight);
 	};
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());

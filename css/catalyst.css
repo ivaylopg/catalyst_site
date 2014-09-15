@@ -5,31 +5,10 @@
  *	-iphone changes height when scroll. This is annoying.
  */
 
-/*
-font-family: 'Lora', serif;  400
-font-family: 'Exo 2', sans-serif; 300 400
-font-family: 'Roboto Slab', serif; 300 400
-font-family: 'Merriweather', serif; 300 400 700
-
-*/
-
-
-/*
-html, body {
-	width:      100%;
-    height:     100%;
-    overflow:   hidden;
-}
-*/
-
-
 body {
 	background-color: #333333;
-	/*If you want to add IE: http://css-tricks.com/perfect-full-page-background-image/ */
-
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 200;
-	/*font-size: 12px;*/
 	font-size: 100%;
 	color: #ffffff;
 	overflow: auto;
@@ -75,7 +54,6 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	/*background-color: rgba(255,0,0,0.1);*/
 }
 
 
@@ -124,19 +102,12 @@ a:hover {
 }
 
 #svgLogo {
-	/*position: absolute;
-	top: 0px;
-	left: 0px;*/
 	width: 100%;
 
 }
 
 #hcBackground {
-	/*position: absolute;
-	top: 0px;
-	left: 0px;*/
 	width: 100%;
-	/*height: auto !important;*/
 }
 
 .hcCell {
@@ -252,12 +223,6 @@ a:hover {
 	position: fixed;
 	width: auto;
 	height: auto;
-	/*
-	background: rgba(255,0,0,0.9);
-	top: 8%;
-	left: 12%;
-	visibility: visible;
-	*/
 }
 
 .fixed {
@@ -269,16 +234,6 @@ a:hover {
  */
 
 #blogBackImage {
-	/*
-	position: absolute;
-	width: 100%;
-	height: 60%;
-	top: 0px;
-	left: 0px;
-	background: url(../images/back3.jpg);
-	background-size: 100%;
-	background-position: 0 0;
-	*/
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -359,7 +314,6 @@ a.navLink {
 }
 
 .entry {
-	/*background-color: #000000;*/
 	background: rgba(51, 51, 51, 0.95);
 	padding: 10px;
 	margin-right: -15px;
@@ -400,26 +354,19 @@ a.navLink {
 	text-align: right;
 }
 
+.51_095 {
+	background: url(../images/51_095.png);
+	background-repeat: repeat;
+}
+
+.100_095 {
+	background: url(../images/100_095.png);
+	background-repeat: repeat;
+}
 
 /****************************************************/
 
 @media only screen and (min-width: 701px) and (max-width: 1024px) {
-/*	.headerSvg {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 20px;
-	}
-
-	#headerComb img {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: auto;	
-	}*/
-
 	#headerComb {
 		top: 0px;
 		left: 0px;
@@ -452,10 +399,6 @@ a.navLink {
 }
 
 @media only screen and (max-width: 700px) {
-/*	#headerComb img, .headerSvg img, .headerSvg .svgImg, .headerSvg {
-		width: 120%;
-		height: auto;
-	}*/
 
 	#headerComb {
 		top: 0px;
@@ -486,20 +429,22 @@ a.navLink {
 	}
 }
 
+/*
+ * SVG Styles
+ */
+
 svg\:svg {
 	display: none;
 }
 
-
-
 .noShow {
 	display: none;
 }
+
 .svg_error {
 	color: red;
 	font-weight: bold;
 }
-
 .fallback { 
   display: none;
   /* Make sure it's the same size as the SVG takes up */
