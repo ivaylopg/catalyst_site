@@ -1,5 +1,8 @@
 /* 
  * Catalyst Styles
+ *
+ * Todo:
+ *	-iphone changes height when scroll. This is annoying.
  */
 
 /*
@@ -18,6 +21,8 @@ html, body {
     overflow:   hidden;
 }
 */
+
+
 body {
 	background-color: #333333;
 	/*If you want to add IE: http://css-tricks.com/perfect-full-page-background-image/ */

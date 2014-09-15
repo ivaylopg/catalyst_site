@@ -65,7 +65,7 @@ function titleResize() {
 	var logoH = $("#logo").height();
 	
 	if ($("#logo").height() == null || $("#logo").height() == 0) {
-		console.log("logoHeight was null");
+		//console.log("logoHeight was null");
 		logoH = $("#headerComb").width() * 0.11845286;
 
 	};
