@@ -22,7 +22,7 @@ body {
 	background-color: #333333;
 	/*If you want to add IE: http://css-tricks.com/perfect-full-page-background-image/ */
 
-	font-family: 'Exo 2', serif;
+	font-family: 'Exo 2', sans-serif;
 	font-weight: 200;
 	/*font-size: 12px;*/
 	font-size: 100%;
@@ -61,6 +61,16 @@ a:hover {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+#splash {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/*background-color: rgba(255,0,0,0.1);*/
 }
 
 
@@ -109,17 +119,17 @@ a:hover {
 }
 
 #svgLogo {
-	position: absolute;
+	/*position: absolute;
 	top: 0px;
-	left: 0px;
+	left: 0px;*/
 	width: 100%;
 
 }
 
 #hcBackground {
-	position: absolute;
+	/*position: absolute;
 	top: 0px;
-	left: 0px;
+	left: 0px;*/
 	width: 100%;
 	/*height: auto !important;*/
 }
@@ -154,15 +164,36 @@ a:hover {
 	font-weight: 200;
 	width: 40%;
 	height: auto;
-	top: 20%;
+	top: 24%;
 	left: 12%;
 	/*background: #333333;*/
 	background: rgba(51, 51, 51, 0.95);
 	padding: 10px;
-	overflow: scroll;
+	/*overflow: scroll;*/
 	margin-bottom: 50px;
 
 }
+
+#navigationFront {
+	position: absolute;
+	top: 0px;
+	left: 12%;
+	width: 85%;
+	text-align: right;
+	margin-top: -29px;
+	margin-left: 15px;
+	font-size: 0.95em;
+	font-weight: 300;
+}
+
+#navigationFront .navLink {
+	display: inline-block;
+	padding: 5px;
+	padding-bottom: 10px;
+	background-color: rgba(51,51,51,0.95);
+}
+
+
 
 #content h1 {
 	color: #FBF49C;

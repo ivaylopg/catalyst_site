@@ -59,7 +59,7 @@ function titleResize() {
 	$(".pageTitle").css("font-size",fontSize-2 + "px");
 
 	var titlePosRatio = 0.513699;
-	var logoH = $("#logo").height()
+	var logoH = $("#logo").height();
 	
 	if ($("#logo").height() == null || $("#logo").height() == 0) {
 		console.log("logoHeight was null");
@@ -79,7 +79,7 @@ $(document).ready(function() {
 	hcHeight = $(window).innerWidth() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
 
-	logoHeight = $(window).innerWidth() * 0.11845286
+	logoHeight = $(window).innerWidth() * 0.11845286;
 	$("#logo").css("height",logoHeight + "px");
 
 	$("#logoHover").hover(
@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 	titleResize();
 
-	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
+	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 2.5);
 	if ($(window).innerWidth() <=700 ) {
 		$("#content").css("top",contTop*1.5 + "px");
 	} else {
@@ -135,6 +135,7 @@ $(document).ready(function() {
 	//console.log(contTop);
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
+	$("#navigationFront").css("margin-top",-1 * $("#navigationFront").height());
 
 	//if ($('#content').position().top+$('#content').outerHeight(false) > $(window).innerHeight()) {
 });
@@ -163,10 +164,11 @@ on_resize(function() {
 	};
 	if (logoLoaded) {
 		$("#svgLogo").css("height",logoHeight+"px");
-		console.log(logoHeight);
+		console.log(logoHeight);										/////////////log both widths and see if there is a difference
 	};
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
+
 
 })();
 
