@@ -1,5 +1,11 @@
-//*
+/*
+ *
+ * The Catalyst Theatre, cutom JavaScript. Requires Jquery.
+ *
+ */
 
+
+//Fixes a deprecated jQuery dependency for jquery.svg
 jQuery.browser = {};
 (function () {
     jQuery.browser.msie = false;
@@ -9,82 +15,13 @@ jQuery.browser = {};
         jQuery.browser.version = RegExp.$1;
     }
 })();
-//*/
+
 
 var hcLoaded = false;
 var logoLoaded = false;
 var hcHeight;
 var logoHeight;
 var doRollover = false;
-//58092105263158
-
-function loadDone(svg, error){
-	if (error != null || error != undefined) {
-		$(this).append("<img data-type='svg' class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
-		$(svg.root()).addClass("noShow");
-	} else {
-		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
-			hcLoaded = true;
-			hcHeight = $('#headerComb').width() * 0.58092105263158;
-			$("#headerImg").css("height","auto");
-			$("#hcBackground").css("height",hcHeight+"px");
-		} else if ($(this).attr("data-source").indexOf("dopamine") >= 0) {
-			logoLoaded = true;
-			logoHeight = $('#headerComb').width() * 0.11845286;
-			$("#logo").css("height","auto");
-			$("#svgLogo").css("height",logoHeight+"px");
-		};
-	};
-
-//error.indexOf("Error") >= 0 || error.indexOf("Error") >= 0
-};
-
-// debulked onresize handler
-function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
-
-function titleResize() {
-	var sizerRatio = 0.17;
-	// if ($(window).innerWidth() <= 1024) {
-	// 	sizerRatio = 0.195;
-	// };
-	var titleWidth = sizerRatio * $("#headerComb").width();
-
-	var fontSize = 12;
-	while($('#sizer').width() < titleWidth-5){
-		$('#sizer').css("font-size",fontSize++ + "px");
-	}
-	//console.log("sizer w: " + $('#sizer').width() + ", titleWidth: " + titleWidth + " | " + fontSize);
-	$("#sizer").css("font-size","12px");
-	$("#catalystName").css("font-size",fontSize + "px");
-	if ($(window).innerWidth() > 700) {
-		$(".pageTitle").css("font-size",fontSize-2 + "px");	
-	};
-	
-
-	var titlePosRatio = 0.513699;
-	var logoH = $("#logo").height();
-	
-	if ($("#logo").height() == null || $("#logo").height() == 0) {
-		//console.log("logoHeight was null");
-		logoH = $("#headerComb").width() * 0.11845286;
-
-	};
-
-	var titlePos = (logoH * titlePosRatio) - ($("#catalystName").height()/2);
-	$("#catalystName").css("top",titlePos + "px");
-};
-
-function contTop() {
-	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 2.5);
-	if ($(window).innerWidth() <=500 ) {
-		$("#content").css("top",contTop*2 + "px");
-	} else if ($(window).innerWidth() <=700 ) {
-		$("#content").css("top",contTop*1.5 + "px");
-	} else {
-		$("#content").css("top",contTop + "px");
-	};
-};
-
 
 $(document).ready(function() {
 	var hoverBox = $("#logoHover");
@@ -125,8 +62,6 @@ $(document).ready(function() {
 		};
 	});
 	
-
-	
 	$(".headerSvg").each(function(){
 		if (Modernizr.svg) {
 			$(this).svg();
@@ -141,35 +76,14 @@ $(document).ready(function() {
 	titleResize();
 	contTop();
 
-	// var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 2.5);
-	// if ($(window).innerWidth() <=500 ) {
-	// 	$("#content").css("top",contTop*3 + "px");
-	// } else if ($(window).innerWidth() <=700 ) {
-	// 	$("#content").css("top",contTop*1.5 + "px");
-	// } else {
-	// 	$("#content").css("top",contTop + "px");
-	// };
-	//console.log(contTop);
-
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
 	$("#navigationFront").css("margin-top",-1 * $("#navigationFront").height());
-
-	//if ($('#content').position().top+$('#content').outerHeight(false) > $(window).innerHeight()) {
 });
 
 on_resize(function() {
 	//console.log("resized");
 	var hoverBox = $("#logoHover");
 	hoverBox.css("height",hoverBox.width());
-
-
-	// titleResize();
-	// var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
-	// if ($(window).innerWidth() <=700 ) {
-	// 	$("#content").css("top",contTop*1.5 + "px");
-	// } else {
-	// 	$("#content").css("top",contTop + "px");
-	// };
 
 	hcHeight = $('#headerComb').width() * 0.58092105263158;
 	$("#headerComb").css("height",hcHeight + "px");
@@ -181,7 +95,7 @@ on_resize(function() {
 	};
 	if (logoLoaded) {
 		$("#svgLogo").css("height",logoHeight+"px");
-		console.log(logoHeight);										/////////////log both widths and see if there is a difference
+		console.log(logoHeight);
 	};
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
@@ -195,8 +109,66 @@ on_resize(function() {
 })();
 
 
-/*
-$(window).resize(function() {
+// debulked onresize handler
+function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,250)};return c};
+
+// Do CSS stuff to SVGs after they are loaded. Also, swap them out for <image> SVGs if jquery SVG is being mean (ie - a CORS error)
+function loadDone(svg, error){
+	if (error != null || error != undefined) {
+		$(this).append("<img data-type='svg' class='svgIsmg' src=" + $(this).attr("data-source") + ".svg" + " />");
+		$(svg.root()).addClass("noShow");
+	} else {
+		if ($(this).attr("data-source").indexOf("honeycomb") >= 0) {
+			hcLoaded = true;
+			hcHeight = $('#headerComb').width() * 0.58092105263158;
+			$("#headerImg").css("height","auto");
+			$("#hcBackground").css("height",hcHeight+"px");
+		} else if ($(this).attr("data-source").indexOf("dopamine") >= 0) {
+			logoLoaded = true;
+			logoHeight = $('#headerComb').width() * 0.11845286;
+			$("#logo").css("height","auto");
+			$("#svgLogo").css("height",logoHeight+"px");
+		};
+	};
+};
+
+// Resize title based on window width, so it allways stays on top of filled-in cells.
+function titleResize() {
+	var sizerRatio = 0.17;
+	var titleWidth = sizerRatio * $("#headerComb").width();
+
+	var fontSize = 12;
+	while($('#sizer').width() < titleWidth-5){
+		$('#sizer').css("font-size",fontSize++ + "px");
+	}
+	$("#sizer").css("font-size","12px");
+	$("#catalystName").css("font-size",fontSize + "px");
+	if ($(window).innerWidth() > 700) {
+		$(".pageTitle").css("font-size",fontSize-2 + "px");	
+	};
 	
-});
-*/
+
+	var titlePosRatio = 0.513699;
+	var logoH = $("#logo").height();
+	
+	if ($("#logo").height() == null || $("#logo").height() == 0) {
+		//console.log("logoHeight was null");
+		logoH = $("#headerComb").width() * 0.11845286;
+
+	};
+
+	var titlePos = (logoH * titlePosRatio) - ($("#catalystName").height()/2);
+	$("#catalystName").css("top",titlePos + "px");
+};
+
+// Set height of single-topic content based on window width and title size
+function contTop() {
+	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 2.5);
+	if ($(window).innerWidth() <=500 ) {
+		$("#content").css("top",contTop*2 + "px");
+	} else if ($(window).innerWidth() <=700 ) {
+		$("#content").css("top",contTop*1.5 + "px");
+	} else {
+		$("#content").css("top",contTop + "px");
+	};
+};
