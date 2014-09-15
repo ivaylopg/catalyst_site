@@ -146,7 +146,7 @@ on_resize(function() {
 	hoverBox.css("height",hoverBox.width());
 
 
-	titleResize();
+	// titleResize();
 	var contTop = parseInt($("#catalystName").css("top"),10) + ($("#catalystName").height() * 1.75);
 	if ($(window).innerWidth() <=700 ) {
 		$("#content").css("top",contTop*1.5 + "px");
@@ -169,6 +169,7 @@ on_resize(function() {
 
 	$("#navigation").css("margin-top",-1 * $("#navigation").height());
 
+	titleResize();
 
 })();
 
