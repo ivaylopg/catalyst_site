@@ -177,11 +177,10 @@ a:hover {
 #navigationFront {
 	position: absolute;
 	top: 0px;
-	left: 12%;
-	width: 85%;
+	left: 0px;
+	width: 100%;
 	text-align: right;
 	margin-top: -29px;
-	margin-left: 15px;
 	font-size: 0.95em;
 	font-weight: 300;
 }
